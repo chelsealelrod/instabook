@@ -85,7 +85,7 @@ class CommentView(ViewSet):
         instabookuser = InstaBookUser.objects.get(user=request.auth.user)
 
         # Do mostly the same thing as POST, but instead of
-        # creating a new instance of Game, get the comment record
+        # creating a new instance of Comment, get the comment record
         # from the database whose primary key is `pk`
         comment = Comment.objects.get(pk=pk)
         comment.instabookuser = instabookuser
@@ -125,11 +125,16 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = ('id','instabookuser', 'image', 'content',
                   'publish')
         depth = 1
-        
+
+class CommentUserSerializer(serializers.ModelSerializer):
+    """JSON serializer for event organizer's related Django user"""
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email']
         
 class InstaBookUserSerializer(serializers.ModelSerializer):
     """JSON serializer for event organizer"""
-    user = InstaBookUserSerializer(many=False)
+    user = CommentUserSerializer(many=False)
 
     class Meta:
         model = InstaBookUser

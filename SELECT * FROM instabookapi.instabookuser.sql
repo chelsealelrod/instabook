@@ -1,0 +1,1 @@
+SELECT * FROM instabookapi.instabookuser

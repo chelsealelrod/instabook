@@ -1,0 +1,14 @@
+[
+    {
+        "model": "instabookapi.comment",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "image": "",
+            "content": "This is a new comment",
+            "publish": "2022-09-14"
+        }
+
+
+}
+]

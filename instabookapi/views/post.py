@@ -130,7 +130,7 @@ class PostUserSerializer(serializers.ModelSerializer):
     """JSON serializer for event organizer's related Django user"""
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'email']
+        fields = ('first_name', 'last_name', 'email')
         
 class InstaBookUserSerializer(serializers.ModelSerializer):
     """JSON serializer for event organizer"""
@@ -138,4 +138,4 @@ class InstaBookUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = InstaBookUser
-        fields = ['user']
+        fields = ('id', 'user', 'bio', 'imageURL', 'location', 'created_on')

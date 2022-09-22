@@ -4,6 +4,14 @@
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django",
         "--django-settings-module=instabook.settings"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "instabook.django",
+            "database": "db.sqlite3"
+        }
     ]
 }
 

@@ -1,4 +1,4 @@
-from .profile import Profile
+from .instabookuser import InstaBookUser
 from .post import Post
 from .comment import Comment
-from .instabookuser import InstaBookUser
+from .preference import Preference

@@ -1,0 +1,16 @@
+[
+    {
+        "model": "instabookapi.post",
+        "pk": 1,
+        "fields": {
+            "title": "First post",
+            "image": "",
+            "content": "",
+            "publish": "",
+            "likes": 2,
+            "dislikes": 2
+        }
+
+
+}
+]

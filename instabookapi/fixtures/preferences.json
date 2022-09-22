@@ -1,0 +1,14 @@
+[
+    {
+        "model": "instabookapi.preference",
+        "pk": 1,
+        "fields": {
+            "user": 2,
+            "post": "",
+            "value": 2,
+            "date": ""
+        }
+
+
+}
+]
